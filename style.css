@@ -1,0 +1,19 @@
+body {
+  background-color: black;
+  color: lime;
+  font-family: monospace;
+  margin: 0;
+  padding: 1em;
+}
+#terminal {
+  white-space: pre-wrap;
+}
+#command {
+  width: 100%;
+  background: black;
+  color: lime;
+  border: none;
+  outline: none;
+  font-family: monospace;
+  font-size: 1em;
+}

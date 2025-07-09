@@ -2,7 +2,9 @@ const terminal = document.getElementById("terminal");
 const input = document.getElementById("command");
 
 async function checkLogin() {
-  const res = await fetch("https://your-worker-url.workers.dev/auth", { credentials: "include" });
+  const res = await fetch("https://webos.maikanamaikana.workers.dev/auth", {
+    credentials: "include"
+  });
   if (res.status !== 200) {
     location.href = "login.html";
   }
@@ -19,8 +21,10 @@ input.addEventListener("keydown", e => {
     } else if (cmd === "whoami") {
       terminal.textContent += "\nuser";
     } else if (cmd === "logout") {
-      fetch("https://your-worker-url.workers.dev/logout", { method: "POST", credentials: "include" })
-        .then(() => location.href = "login.html");
+      fetch("https://webos.maikanamaikana.workers.dev/logout", {
+        method: "POST",
+        credentials: "include"
+      }).then(() => location.href = "login.html");
     } else {
       terminal.textContent += `\nCommand not found: ${cmd}`;
     }
